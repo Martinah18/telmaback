@@ -1,0 +1,18 @@
+
+<h2 class="background double"><span>Liste de tous les datas</span></h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+          <th>Data</th>
+          <th>Supprimer</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of datas" >
+            <td class="lalign">{{data.nomData}}</td>
+            <td><a (click)="supprimerData(data.idData)" ><i class="fa fa-trash-o supprimer"></i></a></td>
+          </tr>
+        <tbody>
+    </table>
+</div>

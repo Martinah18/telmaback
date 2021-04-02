@@ -1,0 +1,16 @@
+
+ <div class="navbar">
+        <a  [routerLink] = "['/offre']">Gestion Offre</a>
+        <a  [routerLink] = "['/datas']"><i class="fa fa-check"></i>Service</a>
+        <a  [routerLink] = "['/validation']"><i class="fa fa-check"></i>Validation Mvola</a>
+        <div class="dropdown">
+             <button class="dropbtn"><i class="fa fa- "></i> Statistique
+                  <i class="fa fa-caret-down"></i>
+              </button>
+               <div class="dropdown-content">
+                        <a  [routerLink] = "['/statistique/offres']">Vente de forfaits</a>
+                        <a  [routerLink] = "['/statistique/datas']">Consommation de donnees</a>
+                </div>
+        </div> 
+        <a  [routerLink] = "['/deconnexion']"> <i class="fa fa-sign-out-alt"> Deconnexion</i></a>
+</div>

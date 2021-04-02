@@ -1,0 +1,19 @@
+<div class="row">
+    <div class ="main">
+        <h2 *ngIf="forfait"  class="background double"><span>Modification du Forfait  {{forfait.nomForfait}}</span></h2>
+        <form class="whatsapp-form" *ngIf="form"  id="msform" [formGroup] = "form">
+            <div class="datainput" *ngFor="let data of forfaitConfig">
+                <input class="validate" id="wa_name" [type] = data.type [formControlName] = data.nomData  [placeholder]="data.nomData" />
+                 <span class="highlight"></span><span class="bar"></span>
+                <label>{{data.nomData}}</label>
+            </div>
+            <div class="datainput" *ngFor="let data of forfait.datas">
+                <input class="validate" id="wa_name" type="number" [formControlName] = data.nomData [value]= data.quantite  [placeholder]="data.quantite" />
+                 <span class="highlight"></span><span class="bar"></span>
+                <label>{{data.nomData}}</label>
+            </div>
+            <input type="submit" (click) = "modifierForfait()" class="btn"  value="Valider" />
+            <div id="text-info"></div>
+        </form>
+    </div>
+</div>

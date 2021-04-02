@@ -1,0 +1,23 @@
+<h2 *ngIf="offre"  class="background double"><span>Liste des Forfaits Pour l'offre  {{offre.nomOffre}}</span></h2>
+    <div *ngIf="forfaits"  class="pricings">
+        <span class="price" *ngFor="let forfait of forfaits">
+            <div class="pricings__top pricings__top--standard">
+                <div class="pricing-tag pricing-tag--standard">{{forfait.nomforfait}} </div>
+                <span class="top-header">{{forfait.code}}</span>
+                <div class="hr"></div>
+                <span class="price"><sup><small>AR</small></sup>{{forfait.prix}}</span>
+                <span class="per-month"> Validite:{{forfait.validite}} Jour</span>
+              </div>
+              <div class="pricings__bottom">
+                <div class="logo-shaped logo-shaped--standard"><i class="fa fa-arrow-down" aria-hidden="true"></i></div>
+                 <ul class="props">
+                     <span *ngFor="let datas of forfait.datas">
+                           <li *ngIf="datas" class="props__item props__item--standard">{{datas.nomData}} : {{datas.quantite}}</li>
+                      </span>
+                </ul>
+                <a *ngIf="offre"  class="actBtn green"  [routerLink] = "'/offre/'+offre.idOffre+'/forfait/'+forfait.idForfait">Modifier</a>
+                <a class="actBtn blue" (click)="supprimerForfait(forfait.idForfait)">Supprimer</a>
+              </div>
+        </span>
+        
+    </div>

@@ -1,0 +1,25 @@
+<div id="form-wrapper">
+    <div id="form-login">
+      <h1>{{message}}</h1>
+      <form [formGroup] = "form">
+        <input type="text"  formControlName ="email" name="email" id="user-id" placeholder="Your Name" required>
+        <div *ngIf="email.invalid && (email.dirty || email.touched)"
+              class="alert warning">
+              <p class="inner" *ngIf="email.errors.required">
+              Veuillez vous connectez avec votre email
+              </p>
+              <p class="inner" *ngIf="email.errors.email">
+              Email non valide
+              </p>
+          </div>
+        <input type="password" formControlName ="mdp" name="mdp" id="user-key" placeholder="Password">
+        <div *ngIf="mdp.invalid && (mdp.dirty || mdp.touched)"
+           class="alert warning">
+           <p class="inner" *ngIf="mdp.errors.required">
+            Veuillez saisir votre mot de passe
+           </p>
+        </div>
+        <input type="submit" (click) = "login()" id="login-btn" value="Log in">
+      </form>
+    </div>
+</div>

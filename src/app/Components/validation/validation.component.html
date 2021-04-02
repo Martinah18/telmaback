@@ -1,0 +1,24 @@
+   
+    <h2 class="background double"><span>Liste des Actions en attente de validations</span></h2>
+   <div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+          <th>Numero</th>
+          <th>Action</th>
+          <th>Date</th>
+          <th>montant</th>
+          <th>Validation</th>
+        </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let action of actions" >
+            <td class="lalign">{{action.numero}}</td>
+            <td class="lalign">{{action.nomTypeAction}}</td>
+            <td>{{action.dateAction}}</td>
+            <td>{{action.montantAction}}</td>
+            <td><a class="valider" (click)="validerAction(action.idaction)">valider <i class="fa fa-check"></i></a></td>
+          </tr>
+        <tbody>
+    </table>
+</div>

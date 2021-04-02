@@ -1,0 +1,17 @@
+<app-menu></app-menu>
+<div class="row">
+    <div class ="side">
+        <app-ajout-data (clickReloadData) = "reloadData()"></app-ajout-data>
+    </div>
+    <div class ="main">
+        <app-list-data (clickReloadData) = "reloadData()"></app-list-data>
+    </div>
+</div>
+<div class="row">
+    <div class ="side"  >
+        <app-edit-tarif *ngIf="idTarif"  (reloadTarif)= "reloadTarifData()"  [idTarif] ="idTarif"></app-edit-tarif>
+    </div>
+    <div class ="main">
+        <app-list-tarif (clickShowModif) = "showModif($event)"></app-list-tarif>
+    </div>
+</div>

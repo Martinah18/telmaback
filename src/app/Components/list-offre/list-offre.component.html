@@ -1,0 +1,32 @@
+
+<h2 class="background double"><span>Liste de tous les offres</span></h2>
+    <div class="table-wrapper">
+        <table class="fl-table">
+            <thead>
+            <tr>
+              <th>Offre</th>
+              <th>telma(ar/s)</th>
+              <th>autre(ar/s)</th>
+              <th>international(ar/s)</th>
+              <th>description</th>
+              <th>Forfaits</th>
+              <th>Ajouter ( forfait )</th>
+              <th>Modifier</th>
+              <th>Supprimer</th>
+            </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let offre of offres" >
+                <td class="lalign">{{offre.nomOffre}}</td>
+                <td>{{offre.interne}}</td>
+                <td>{{offre.autres}}</td>
+                <td>{{offre.international}}</td>
+                <td>{{offre.description}}</td>
+                <td><a [routerLink] = "'/offre/'+offre.idOffre"><i class="fa fa-list"></i></a></td>
+                <td><a [routerLink] = "'/offre/'+offre.idOffre+'/ajouter'"><i class="fa fa-plus"></i></a></td>
+                <td><a [routerLink] = "'/offre/'+offre.idOffre+'/modifier'"><i class="fa fa-pencil"></i></a></td>
+                <td><a (click)="supprimerOffre(offre.idOffre)" ><i class="fa fa-trash-o supprimer"></i></a></td>
+              </tr>
+            <tbody>
+        </table>
+    </div>

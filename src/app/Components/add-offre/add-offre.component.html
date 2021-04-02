@@ -1,0 +1,11 @@
+  <!-- multistep form -->
+    <form *ngIf="form"  id="msform" [formGroup] = "form">
+      <fieldset>
+        <h2 class="fs-title">{{message}}</h2>
+        <span *ngFor="let data of offreConfig" >
+        <label for="">{{data.nomData}}</label>
+        <input   [type] = data.type [formControlName] = data.nomData   [placeholder]="data.nomData"  required/>
+    </span>
+        <input type="submit" (click) = "ajouterOffre()" class="submit action-button" value="Valider" />
+        </fieldset>
+    </form>

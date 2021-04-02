@@ -1,0 +1,159 @@
+
+
+body{background:#e8e8e8;}.note{display:block;width:350px;margin:10% auto 0;color:red;text-align:center;font-family: 'Source Sans Pro', sans-serif;}#form-login h1 {font-size:37px;text-align:center;font-family:'Oswald',sans-serif;color:#0F9D58;text-transform:uppercase;margin:0;padding:30px 0 70px;}#form-register h1 {font-size:37px;text-align:center;font-family:'Oswald',sans-serif;color:#4285F4;text-transform:uppercase;margin:0;padding:30px 0 70px;}#form-recovery h1 {font-size:37px;text-align:center;font-family:'Oswald',sans-serif;color:red;text-transform:uppercase;margin:0;padding:30px 0 70px;}
+
+
+#form-wrapper {
+  position: relative;
+  width: 400px;
+  height: auto;
+  border-radius: 3px;
+  margin: 50px auto 0;
+  padding: 10px 0;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 0 3px rgba(0,0,0,.3);
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+#form-login {
+  height: auto;
+  margin: 0;
+  background: #fff;
+  transition: margin-top 1.5s;
+}
+
+#form-register {
+  height: 500px;
+  background: #222;
+  margin-top: -510px;
+  transition: margin-top 1.5s;
+}
+
+#form-recovery {
+  height: 500px;
+  background: #fff;
+  margin-top: 510px;
+  transition: margin-top 1.5s;
+}
+
+#form-login input,
+#form-recovery input {
+  display: block;
+  width: 75%;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  position: relative;
+  padding: 0 10px;
+  border-radius: 3px;
+  border: none;
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  border: 1px solid #e8e8e8;
+}
+
+#form-register input {
+  display: block;
+  width: 75%;
+  height: 40px;
+  line-height: 40px;
+  margin: 10px auto;
+  position: relative;
+  padding: 0 10px;
+  border-radius: 3px;
+  border: none;
+  font-size: 21px;
+  font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  text-align: center;
+  border: 1px solid #444;
+  background: #222;
+  color: #fff;
+}
+
+#form-login #login-btn {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  background: #0F9D58;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+#form-recovery #recover-btn {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  background: red;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+#form-register #register-btn {
+  width: 50%;
+  height: 40px;
+  line-height: 40px;
+  background: #4285F4;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  margin-top: 50px;
+}
+
+#form-login span,
+#form-register span {
+  width: 75%;
+  margin: 0 auto;
+  padding: 0 7.5%;
+  position: relative;
+}
+
+#form-login span a {
+  display: inline-block;
+  font-size: 11px;
+  color: #222;
+  text-decoration: none;
+  width: 40%;
+  margin: 0;
+  text-align: center;
+}
+
+#form-register span a {
+  display: block;
+  font-size: 11px;
+  color: #fff;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+}
+
+#form-recovery span a {
+  display: block;
+  font-size: 11px;
+  color: #222;
+  text-decoration: none;
+  margin: 0;
+  text-align: center;
+}
+
+#form-login span a:hover {
+  color: #0F9D58;
+}
+
+#form-register span a:hover {
+  color: #4285F4;
+}
+
+#form-recovery span a:hover {
+  color: red;
+}

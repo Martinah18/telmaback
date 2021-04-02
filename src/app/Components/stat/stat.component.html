@@ -1,0 +1,41 @@
+  
+<div *ngIf="statData"  class="row">
+    <div id="chartStat">
+        <div id="chart">
+            <ngx-charts-bar-vertical
+            [view]=""
+            [results]="statData"
+            [xAxisLabel]="chartConfig.axeX"
+            [legendTitle]="chartConfig.legende"
+            [yAxisLabel]="chartConfig.axeY"
+            [legend]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [xAxis]="true"
+            [yAxis]="true"
+            [gradient]="true"
+            [noBarWhenZero] = "false"
+            [animations]="true">
+        </ngx-charts-bar-vertical>
+        </div>
+    </div>
+    <div  *ngIf="statData" id="tabStat">
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>Contexte</th>
+                    <th>Montant</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let data of statData" >
+                    <td>{{data.name}}</td>
+                    <td>{{data.montant}}</td>
+                </tr>
+                <tbody>
+            </table>
+        </div>
+    </div>
+</div>
+

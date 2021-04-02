@@ -1,0 +1,7 @@
+<form id="msform" [formGroup] = "form">
+    <fieldset>
+      <h2 class="fs-title">{{message}}</h2>
+      <input   type= "text" formControlName ="nom"   required/>
+      <input type="submit" (click) = "ajouterData()" class="submit action-button" value="Valider" />
+      </fieldset>
+  </form>

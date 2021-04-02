@@ -1,0 +1,9 @@
+<app-menu></app-menu>
+<div class="row">
+    <div class="main">
+        <div class="listeForfait">
+            <button class="btn" [routerLink] = "'/offre/'+idOffre" > Liste des Forfaits</button>
+        </div>
+        <app-add-forfait (clickReloadData) = "reloadData()" [idOffre] = "idOffre"></app-add-forfait>
+    </div>
+</div>

@@ -1,0 +1,50 @@
+<form *ngIf="form"  [formGroup] = "form">
+    <div class=" row box">
+        <select formControlName = "idoffre">
+          <option *ngFor="let offre of offres"    [value]= offre.idOffre >{{offre.nomOffre}}</option>
+        </select>
+        <input type = "number" formControlName ="annee"  placeholder="yyyy" >
+        <input type = "number" formControlName ="mois" placeholder="MM" >
+        <input type="submit" (click)="voirStat()" name ="submit" value="Voir">
+    </div>
+</form>   
+  
+<div *ngIf="statData"  class="row">
+    <div id="chartStat">
+        <div id="chart">
+            <ngx-charts-bar-vertical
+            [view]=""
+            [results]="statData"
+            [xAxisLabel]="'Forfait'"
+            [legendTitle]="'Vente Forfait'"
+            [yAxisLabel]="'Nombre de Vente'"
+            [legend]="true"
+            [showXAxisLabel]="true"
+            [showYAxisLabel]="true"
+            [xAxis]="true"
+            [yAxis]="true"
+            [gradient]="true"
+            [noBarWhenZero] = "false"
+            [animations]="true">
+            </ngx-charts-bar-vertical>
+        </div>
+    </div>
+    <div  *ngIf="statData" id="tabStat">
+        <div class="table-wrapper">
+            <table class="fl-table">
+                <thead>
+                <tr>
+                    <th>Forfait</th>
+                    <th>Montant Ariary</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr *ngFor="let data of statData" >
+                    <td>{{data.name}}</td>
+                    <td>{{data.montant}}</td>
+                </tr>
+                <tbody>
+            </table>
+        </div>
+    </div>
+</div>

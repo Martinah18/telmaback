@@ -1,0 +1,14 @@
+
+<form *ngIf="form"  [formGroup] = "form">
+    <div *ngIf="dataConfig"  class=" row box">
+        <select [formControlName] = dataConfig[0].nom >
+          <option *ngFor="let type of types"    [value]= type.id >{{type.nom}}</option>
+        </select>
+        <select *ngIf= "month"  [formControlName] = dataConfig[2].nom   name="mois" >
+            <option type="number" *ngFor="let mois of moisConfig" [value]= mois.id >{{mois.nom}}</option>
+        </select>
+        <input type = "number"  [formControlName] = dataConfig[1].nom  type="text" placeholder="yyyy" >
+        <input type="submit" (click)= "voirStat()" name ="submit" value="Voir">
+    </div>
+</form>   
+  

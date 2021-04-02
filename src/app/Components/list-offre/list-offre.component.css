@@ -1,0 +1,12 @@
+.table-wrapper{
+    margin-left: 10px !important;
+    margin-right: auto !important;
+}
+
+i{
+    color: #4FC3A1;
+}
+.supprimer{
+    color : red !important;
+    cursor: pointer;
+}

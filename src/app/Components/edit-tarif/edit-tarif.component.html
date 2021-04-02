@@ -1,0 +1,7 @@
+<form *ngIf="tarif"  id="msform" [formGroup] = "form">
+    <fieldset>
+      <h2 class="fs-title">Modifier le tarifs :{{tarif.nomData}}</h2>
+      <input *ngFor="let data of tarifConfig"  type= "number" [formControlName] = data.nomData   required/>
+      <input type="submit" (click) = "modifierTarif()" class="submit action-button" value="Valider" />
+    </fieldset>
+</form>

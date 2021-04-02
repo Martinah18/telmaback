@@ -1,0 +1,24 @@
+
+<h2 class="background double"><span>Liste de tous les tarifs</span></h2>
+<div class="table-wrapper">
+    <table class="fl-table">
+        <thead>
+        <tr>
+          <th>Type</th>
+          <th>Interne(Ar/sec)</th>
+          <th>Autres(Ar/sec)</th>
+          <th>International(Ar/sec)</th>
+          <th>Modification</th>
+        </tr>
+        </thead>
+        <tbody *ngIf="datas" >
+          <tr *ngFor="let data of datas" >
+            <td class="lalign">{{data.nomData}}</td>
+            <td class="lalign">{{data.interne}}</td>
+            <td class="lalign">{{data.autres}}</td>
+            <td class="lalign">{{data.international}}</td>
+            <td><a (click)="showModif(data.idTarif)" ><i class="fa fa-pencil "></i></a></td>
+          </tr>
+        <tbody>
+    </table>
+</div>

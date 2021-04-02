@@ -1,0 +1,15 @@
+<div class="row">
+    <div class ="main">
+        <h2 *ngIf="offre"  class="background double"><span>Modification de l'Offre  {{offre.nomOffre}}</span></h2>
+        <form class="whatsapp-form" *ngIf="form"  id="msform" [formGroup] = "form">
+            <div class="datainput" *ngFor="let data of offreConfig">
+                <input class="validate" id="wa_name" [type] = data.type [formControlName] = data.nomData   [placeholder]="data.nomData" />
+                 <span class="highlight"></span><span class="bar"></span>
+                <label>{{data.nomData}}</label>
+            </div>
+            <input type="submit" (click) = "modifierOffre()" class="btn" value="Valider" />
+            <div id="text-info"></div>
+        </form>
+    </div>
+</div>
+    

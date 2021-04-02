@@ -1,0 +1,208 @@
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+* {
+    box-sizing: border-box;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background: #dcdcdc;
+}
+span {
+    display: block;
+}
+small {
+    font-size: 0.5em;
+    font-weight: 100;
+    margin: 0 5px;
+}
+.container {
+    min-width: 745px;
+    max-width: 840px;
+    margin: 4em auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.pricings {
+    text-align: center;
+    width: 240px;
+    display: flex;
+    max-width: 100%;
+    box-shadow: 0 2px 3px 1px #b5b5b5;
+}
+.pricings__top, .pricings__bottom {
+    padding: 1.6em 2.3em;
+    width: 250px;
+}
+.pricings__top {
+    position: relative;
+    color: #fff;
+    min-height: 190px;
+    overflow: hidden;
+}
+.pricings__top--standard {
+    background:  #36cb72;
+}
+.pricings__top .top-header {
+    font-size: 20px;
+    font-weight: 600;
+    padding: 0 30px 7px;
+    margin-bottom: 3px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+}
+.pricings__top .price {
+    font-size: 3em;
+    font-weight: 400;
+}
+.pricings__top .per-month {
+    font-size: 17px;
+    font-weight: 300;
+}
+.pricing-tag {
+    position: absolute;
+    height: 40px;
+    width: 130px;
+    line-height: 40px;
+    left: 0;
+    top: 0;
+    transform: rotate(-45deg) translate(-30px, -20px);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.pricing-tag--standard {
+    background-color: #FFFF00;
+    color: black !important;
+}
+.logo-shaped {
+    position: absolute;
+    left: 50%;
+    top: -25px;
+    color: #fff;
+    height: 50px;
+    width: 50px;
+    line-height: 50px;
+    border: 3px solid #eee;
+    transform: translateX(-50%);
+    z-index: 55;
+}
+.logo-shaped--basic {
+    border-radius: 50%;
+    background-color: #dc4c40;
+}
+.logo-shaped--standard {
+    height: 50px;
+    width: 50px;
+    background: red;
+    background-color: #247696;
+}
+.hex {
+    position: absolute;
+    left: 50%;
+    top: -15px;
+    color: #fff;
+    height: 30px;
+    width: 50px;
+    background-color: #eee;
+    line-height: 30px;
+    transform: translateX(-50%);
+}
+.hex:before, .hex:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+}
+.hex:before {
+    border-top: 15px solid #eee;
+    top: 30px;
+}
+.hex:after {
+    border-bottom: 15px solid #eee;
+    bottom: 30px;
+}
+.hex .hex_logo {
+    position: absolute;
+    height: 26px;
+    width: 43px;
+    background: #36cb72;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
+}
+.hex .hex_logo:before, .hex .hex_logo:after {
+    position: absolute;
+    left: 0;
+    content: '';
+    border-left: 21.5px solid transparent;
+    border-right: 21.5px solid transparent;
+}
+.hex .hex_logo:before {
+    border-top: 13px solid #36cb72;
+    top: 26px;
+}
+.hex .hex_logo:after {
+    border-bottom: 13px solid #36cb72;
+    bottom: 26px;
+}
+.pricings__bottom {
+    position: relative;
+    background: #eee;
+    height: 400px !important;
+}
+.pricings__bottom .props {
+    margin-top: 10px;
+}
+.pricings__bottom .props__item {
+    font-size: 14px;
+    font-weight: 400;
+    padding: 15px 0;
+    border-bottom: 1px solid #fff;
+}
+.pricings__bottom .props__item:before {
+    margin-right: 10px;
+}
+.pricings__bottom .props__item--basic {
+    color: #dc4c40;
+}
+.pricings__bottom .props__item--basic:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+
+.pricings__bottom .props__item--standard {
+    color: #247696;
+}
+.pricings__bottom .props__item--standard:before {
+    content: "\f00c";
+    font-family: FontAwesome;
+}
+.pricings__bottom .actBtn {
+    display: block;
+    color: #fff;
+    padding: 9px 7px;
+    text-decoration: none;
+    margin-top: 1em;
+    transition: all 300ms ease;
+}
+.pricings__bottom .actBtn:hover {
+    position: relative;
+    top: -3px;
+    box-shadow: 0 3px 3px 1px #ccc;
+}
+.pricings__bottom .red {
+    background: #dc4c40;
+}
+.pricings__bottom .green {
+    background: #36cb72;
+}
+.pricings__bottom .blue {
+    background: #247696;
+}

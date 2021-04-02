@@ -1,0 +1,10 @@
+.btn{
+    margin: 50px;
+}
+.listeForfait{
+    margin-left: 30%;
+}
+.listeForfait .btn{
+    width: 500px;
+    height: 50px;
+}
